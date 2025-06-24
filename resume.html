@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周子榆 - 简历</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            background: #f0f2f5;
+        }
+        
+        .a4-resume {
+            width: 210mm;
+            height: 297mm;
+            margin: 10px auto;
+            padding: 13mm;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .header {
+            padding-top: 1mm;
+            margin-top: -1mm;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a2980;
+            letter-spacing: 0.5px;
+            margin: 0 0 3px 0;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 11px;
+            margin: 5px 0;
+            line-height: 1.3;
+        }
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a2980;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #26d0ce;
+            margin: 10px 0 8px 0;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-size: 11.5px;
+            gap: 1px;
+            margin-bottom: 0px;
+            margin-top: 1px; 
+        }
+        
+        .education-item {
+            padding: 1px 0;
+            font-size: 11.5px;
+            text-align: left;
+            line-height: 1.3;
+        }
+        
+        .project-container {
+            margin-bottom: 8px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            background: #f8f9fa;
+            border-radius: 3px;
+        }
+        
+        .project-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .project-table td {
+            padding: 6px 8px;
+            vertical-align: top;
+            font-size: 11.5px;
+            line-height: 1.3;
+        }
+        
+        .project-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .category-cell {
+            width: 15%;
+            font-weight: 600;
+        }
+        
+        .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        
+        .skill-table td {
+            padding: 4px 6px;
+            vertical-align: top;
+            font-size: 11.5px;
+            line-height: 1.3;
+        }
+        
+        .skill-category {
+            width: 15%;
+            font-weight: 600;
+        }
+        
+        /* 添加控制按钮 */
+        .adjust-controls {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .adjust-btn {
+            margin: 5px;
+            padding: 8px 12px;
+            background: #1a2980;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .adjust-btn:hover {
+            background: #26d0ce;
+        }
+        
+        /* 打印优化 */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            
+            .a4-resume {
+                width: 210mm;
+                height: 297mm;
+                padding: 13mm;
+                box-shadow: none;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            /* 重要：隐藏调整控件 */
+            .adjust-controls {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a4-resume">
+        <!-- 个人信息头部 -->
+        <div class="header">
+            <h1 class="name">周子榆</h1>
+            <div class="contact-info">
+                <div>电话: 13430687998</div>
+                <div>邮箱: zziyuou@163.com</div>
+                <div>居住地: 北京</div>
+                <div>生日: 2002.11</div>
+                <div>时间：一周内到岗，3-6个月</div>
+            </div>
+            <div style="font-size: 11.5px; margin: 3px 0;text-align: center;line-height:1.3">
+                研究方向: 使用python,从事点云重建算法的研究；机器学习算法；
+            </div>
+            <div style="font-weight: bold; font-size: 12px; color: #e74c3c; margin-bottom: 2px;text-align: center;">
+                求职意向: AI产品
+            </div>
+        </div>
+        
+        <!-- 教育背景 -->
+        <h2 class="section-title">教育背景</h2>
+        <div class="education-grid">
+            <div class="education-item">北京科技大学</div>
+            <div class="education-item">控制工程(B+学科)</div>
+            <div class="education-item">硕士(专业前20%)</div>
+            <div class="education-item">2024.09-2027.06</div>
+        </div>
+        <div class="education-item">课程：运筹学、计算方法、工业大数据分析与应用、工程优化方法</div>
+
+        <div class="education-grid">
+            <div class="education-item">广州大学</div>
+            <div class="education-item">机器人工程</div>
+            <div class="education-item">学士(专业前20%)</div>
+            <div class="education-item">2020.09-2024.06</div>
+        </div>
+        <div class="education-item">课程：高等数学、项目管理、网页设计、数据库管理</div>
+        <div class="education-item">校园经历：班长、社团联合会副主席、蓝信封儿童关怀项目优秀通信大使</div>
+        <!-- 项目经历 -->
+        <h2 class="section-title">项目经历</h2>
+        
+        <!-- 项目2 -->
+        <div class="project-container">
+            <div class="project-header">
+                <span>2024.04-2024.06</span>
+                <span style="text-align: center;">基于巡检机器人图像的动火点检测及预警系统</span>
+                <span>负责人</span>
+            </div>
+            <table class="project-table">
+                <tr>
+                    <td class="category-cell">需求调研</td>
+                    <td>
+                        梳理动火点检测的核心痛点；对标国内外智能巡检解决方案，提炼差异化功能需求。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">原型设计</td>
+                    <td>
+                        制定 MVP 功能列表（实时发现、置信度可视化、预警推送），输出线框图和交互流程，产出 PRD 文档并推动评审。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">跨团队协同</td>
+                    <td>
+                        与算法同学共同设计 YOLOv5+Vari-FocalLoss 改进方案，定义数据标注标准和模型评估指标。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">迭代与成果</td>
+                    <td>
+                        组织多轮用户测试，收集现场反馈并迭代预警阈值；监控系统性能和误报率，推动算法微调和业务流程优化。<br>
+                        成功构建 HMSD 数据集并完善标注流程，支持动火点精准识别；动火点实时识别准确率平均提高 10.7%，预警响应时间缩短 30%，获得运维团队一致认可。
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 项目3 -->
+        <div class="project-container">
+            <div class="project-header">
+                <span>2023.06-2024.03</span>
+                <span>电影数据爬取与可视化平台</span>
+                <span>负责人</span>
+            </div>
+            <table class="project-table">
+                <tr>
+                    <td class="category-cell">产品定位&用户洞察</td>
+                    <td>
+                        针对影评分析和推荐痛点，调研媒体内容运营与影迷用户的核心需求，确定数据抓取、清洗与展示三大模块。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">需求分解</td>
+                    <td>
+                        设计数据指标体系（票房、评分、热度、用户评论关键词等），拆分为爬虫层、数据层与可视化层；输出层。<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">协同推进</td>
+                    <td>
+                        进行BeautifulSoup爬虫开发，设定Throttling和失败重试策略，保障数据完整性；实现 Numpy/Pandas 清洗流程与 MySQL 存储。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">项目成果</td>
+                    <td>
+                        抓取电影数据上千条，完整覆盖 100+ 主要站点；构建一套可复用的数据清洗与报告模板，后续可快速迁移至其他垂类内容项目；
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="project-container">
+            <div class="project-header">
+                <span>2023.06-2024.03</span>
+                <span>COZE平台搭建行业竞品分析智能体</span>
+                <span>负责人</span>
+            </div>
+            <table class="project-table">
+                <tr>
+                    <td class="category-cell">产品定位</td>
+                    <td>
+                        为实现高效行业调研，设计并实现端到端自动化竞品分析工作流，最终生成结构化Word报告。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">需求分解</td>
+                    <td>
+                        快速获取竞品分析拆解为数据层（竞品智能筛选）、分析层（市场/用户/功能三维度建模）、输出层（结构化文档生成）。设计分层Prompt结构引导AI输出专业、标准化的分析内容。<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category-cell">项目成果</td>
+                    <td>
+                        显著提升竞品分析效率（约10倍），报告完整度达92%，用户操作简化至3步点击，构建可复用分析框架。后续可快速迁移至其他垂类内容调研。
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        
+        <!-- 专业技能 -->
+        <h2 class="section-title">自我评价</h2>
+        <table class="skill-table">
+            <tr>
+                <td class="skill-category">技能</td>
+                <td>多种编程语言(MATLAB, Python, C,html)；数据处理（SQL,python,OFFICE）；深度学习（Pytorch,transform;YOLO,CNN,LLM等）;流程图（Xmind，幕布）</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="skill-category">优势</td>
+                <td>深度参与多端AI项目，熟悉多种智能算法，运用编程完成数据处理分析，熟练使用国内外大模型GPT,Gemini,Deepseek等，设计提示词引导AI输出；熟练搭建coze智能体，设计工作流</td>
+            </tr>
+            <tr>
+                <td class="skill-category">态度</td>
+                <td>工作中"靠谱"和"认真"是我的最大特点，规划协同和主动学习是我的优势，热爱学习新知识，喜欢挑战；善于沟通，逻辑能力强</td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- 自动调整控制面板 -->
+    <div class="adjust-controls">
+        <button class="adjust-btn" id="autoAdjustBtn">自动调整间距</button>
+        <button class="adjust-btn" id="resetBtn">恢复默认</button>
+        <div style="margin-top:10px;font-size:12px;">
+            <label for="spacingFactor">间距调整系数:</label>
+            <input type="range" id="spacingFactor" min="0.7" max="1.2" step="0.05" value="0.85">
+            <span id="factorValue">0.85x</span>
+        </div>
+    </div>
+
+    <script>
+        // 存储原始样式值
+        const originalStyles = {
+            fonts: {
+                name: 24,
+                contactInfo: 11,
+                sectionTitle: 15,
+                educationItem: 11.5,
+                projectHeader: 12,
+                projectTable: 11.5,
+                skillTable: 11.5
+            },
+            margins: {
+                sectionTitle: "10px 0 8px 0",
+                projectContainer: "0 0 8px 0",
+                contactInfo: "5px 0"
+            },
+            paddings: {
+                resume: "13mm",
+                projectHeader: "6px 10px",
+                projectTable: "6px 8px",
+                skillTable: "4px 6px"
+            },
+            lineHeights: {
+                contactInfo: 1.3,
+                educationItem: 1.3,
+                projectTable: 1.3,
+                skillTable: 1.3
+            }
+        };
+        
+        // 应用缩放因子
+        function applySpacingFactor(factor) {
+            // 调整字体大小
+            document.querySelector('.name').style.fontSize = (originalStyles.fonts.name * factor) + 'px';
+            document.querySelectorAll('.contact-info div').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.contactInfo * factor) + 'px';
+            });
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.sectionTitle * factor) + 'px';
+            });
+            document.querySelectorAll('.education-item').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.educationItem * factor) + 'px';
+            });
+            document.querySelectorAll('.project-header span').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.projectHeader * factor) + 'px';
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.projectTable * factor) + 'px';
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.fontSize = (originalStyles.fonts.skillTable * factor) + 'px';
+            });
+            
+            // 调整行高
+            document.querySelector('.contact-info').style.lineHeight = (originalStyles.lineHeights.contactInfo * factor);
+            document.querySelectorAll('.education-item').forEach(el => {
+                el.style.lineHeight = (originalStyles.lineHeights.educationItem * factor);
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.lineHeight = (originalStyles.lineHeights.projectTable * factor);
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.lineHeight = (originalStyles.lineHeights.skillTable * factor);
+            });
+            
+            // 调整外边距和内边距
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.style.margin = originalStyles.margins.sectionTitle.split(' ').map(m => parseFloat(m) * factor + 'px').join(' ');
+            });
+            document.querySelectorAll('.project-container').forEach(el => {
+                el.style.marginBottom = (parseFloat(originalStyles.margins.projectContainer.split(' ')[2]) * factor) + 'px';
+            });
+            document.querySelector('.contact-info').style.margin = originalStyles.margins.contactInfo.split(' ').map(m => parseFloat(m) * factor + 'px').join(' ');
+            
+            document.querySelector('.a4-resume').style.padding = (parseFloat(originalStyles.paddings.resume) * factor) + 'mm';
+            document.querySelectorAll('.project-header').forEach(el => {
+                el.style.padding = originalStyles.paddings.projectHeader.split(' ').map(p => parseFloat(p) * factor + 'px').join(' ');
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.padding = originalStyles.paddings.projectTable.split(' ').map(p => parseFloat(p) * factor + 'px').join(' ');
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.padding = originalStyles.paddings.skillTable.split(' ').map(p => parseFloat(p) * factor + 'px').join(' ');
+            });
+            
+            // 调整项目头部的间隙
+            document.querySelectorAll('.project-header span').forEach((el, index) => {
+                if (index === 1) {
+                    el.style.flex = (1 * factor).toString();
+                }
+            });
+            
+            // 更新滑块显示
+            document.getElementById('factorValue').textContent = factor.toFixed(2) + 'x';
+        }
+        
+        // 重置为原始样式
+        function resetStyles() {
+            // 恢复字体大小
+            document.querySelector('.name').style.fontSize = originalStyles.fonts.name + 'px';
+            document.querySelectorAll('.contact-info div').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.contactInfo + 'px';
+            });
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.sectionTitle + 'px';
+            });
+            document.querySelectorAll('.education-item').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.educationItem + 'px';
+            });
+            document.querySelectorAll('.project-header span').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.projectHeader + 'px';
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.projectTable + 'px';
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.fontSize = originalStyles.fonts.skillTable + 'px';
+            });
+            
+            // 恢复行高
+            document.querySelector('.contact-info').style.lineHeight = originalStyles.lineHeights.contactInfo;
+            document.querySelectorAll('.education-item').forEach(el => {
+                el.style.lineHeight = originalStyles.lineHeights.educationItem;
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.lineHeight = originalStyles.lineHeights.projectTable;
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.lineHeight = originalStyles.lineHeights.skillTable;
+            });
+            
+            // 恢复外边距和内边距
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.style.margin = originalStyles.margins.sectionTitle;
+            });
+            document.querySelectorAll('.project-container').forEach(el => {
+                el.style.marginBottom = originalStyles.margins.projectContainer;
+            });
+            document.querySelector('.contact-info').style.margin = originalStyles.margins.contactInfo;
+            
+            document.querySelector('.a4-resume').style.padding = originalStyles.paddings.resume;
+            document.querySelectorAll('.project-header').forEach(el => {
+                el.style.padding = originalStyles.paddings.projectHeader;
+            });
+            document.querySelectorAll('.project-table td').forEach(el => {
+                el.style.padding = originalStyles.paddings.projectTable;
+            });
+            document.querySelectorAll('.skill-table td').forEach(el => {
+                el.style.padding = originalStyles.paddings.skillTable;
+            });
+            
+            // 恢复项目头部布局
+            document.querySelectorAll('.project-header span').forEach((el, index) => {
+                if (index === 1) {
+                    el.style.flex = "1";
+                }
+            });
+            
+            // 重置滑块
+            document.getElementById('spacingFactor').value = 0.85;
+            document.getElementById('factorValue').textContent = '0.85x';
+        }
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始应用0.85x间距
+            applySpacingFactor(0.85);
+            
+            // 绑定按钮事件
+            document.getElementById('autoAdjustBtn').addEventListener('click', function() {
+                // 智能调整到最佳比例
+                applySpacingFactor(0.82);
+            });
+            
+            document.getElementById('resetBtn').addEventListener('click', resetStyles);
+            
+            // 绑定滑块事件
+            document.getElementById('spacingFactor').addEventListener('input', function() {
+                const factor = parseFloat(this.value);
+                applySpacingFactor(factor);
+            });
+        });
+    </script>
+</body>
+</html>
